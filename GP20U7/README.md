@@ -21,7 +21,12 @@ https://www.sparkfun.com/products/13740
     }
 
     void loop() {
-      gp.update(true);
+      if (gp.update() == true) {
+        Serial.print("Latitude : ");
+        Serial.print(gp.getLatitude());
+        Serial.print("\tLongitude : ");
+        Serial.println(gp.getLongitude());
+      }
     }
 
 

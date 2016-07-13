@@ -1,6 +1,7 @@
 # GP20U7
 
-Arduino Library for GPS-Module(GP20U7)
+Arduino Library for GPS Module(GP-20U7)
+https://www.sparkfun.com/products/13740
 
 ## Description
 

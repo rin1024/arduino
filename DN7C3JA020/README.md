@@ -46,6 +46,20 @@ http://aitendo3.sakura.ne.jp/aitendo_data/product_img/sensor/air/GP2Y1010/gp2y10
 
 - Arduino IDE
 
+## Usage
+
+***Pin Assign:***
+- Pin 1(VCC) => 5V
+- Pin 2(Vo) => A0
+- Pin 3(S-GND) => GND
+- Pin 4(LED) => D2
+- Pin 5(LED-GND) => GND
+- Pin 6(V-LED) => VCC - 150Ohm
+                          |
+                        Pin 6
+                          |
+                        220uF - GND
+
 ## Author
 
 [@rin1024](https://twitter.com/rin1024)

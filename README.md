@@ -8,13 +8,13 @@ Arduinoまわりの便利クラスをまとめています。
 
 ## Features
 
-***DN7C3JA020 : ***
+***DN7C3JA020:***
 PM2.5センサをそこはかとなく使えるようにした
 
-***PPD42NS : ***
+***PPD42NS:***
 ほこりセンサをpulseInではなく非同期で使えるようにした
 
-***GP20U7 : ***
+***GP20U7:***
 GPSモジュールをSoftwareSerialで使えるようにした
 
 ## Requirement

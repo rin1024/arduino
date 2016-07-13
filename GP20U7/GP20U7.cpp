@@ -26,7 +26,8 @@ void GP20U7::init(Stream *_serial) {
 /**
  * アップデート関数
  */
-void GP20U7::update(boolean debugDump) {
+bool GP20U7::update(boolean debugDump) {
+  bool updated = false;
   while (gpsSerial->available() > 0) {
     int serialData = gpsSerial->read();
 
@@ -72,17 +73,10 @@ void GP20U7::update(boolean debugDump) {
         char*endptr;
 
         // 緯度・経度のみ取る
-        float latitude  = strtod(gpsVals[1], &endptr);
-        float longitude = strtod(gpsVals[3], &endptr);
+        latitude  = strtod(gpsVals[1], &endptr);
+        longitude = strtod(gpsVals[3], &endptr);
 
         if (debugDump == true) {
-          Serial.print("[recv]");
-          Serial.print(latitude);
-          Serial.print(", ");
-          Serial.print(longitude);
-          Serial.println();
-
-          // パケット全体を確認
           for(int i=0;i<GPS_NUM_POS;i++) {
             Serial.print("[");
             Serial.print(i);
@@ -102,6 +96,8 @@ void GP20U7::update(boolean debugDump) {
             gpsVals[i][j] = '\0';
           }
         }
+
+        updated = true;
       }
     }
     else {
@@ -110,6 +106,22 @@ void GP20U7::update(boolean debugDump) {
       }
     }
   }
+
+  return updated;
+}
+
+/**
+ *
+ */
+float GP20U7::getLatitude() {
+  return latitude;
+}
+
+/**
+ *
+ */
+float GP20U7::getLongitude() {
+  return longitude;
 }
 
 

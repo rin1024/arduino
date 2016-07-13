@@ -23,7 +23,9 @@ class GP20U7 {
   public:
     GP20U7();
     void init(Stream *_serial);
-    void update(boolean debugDump = false);
+    bool update(boolean debugDump = false);
+    float getLatitude();
+    float getLongitude();
     static long serialRate(){ return 9600; }
 
   private:
@@ -32,8 +34,11 @@ class GP20U7 {
     uint16_t gpsPosIndex;
     uint16_t gpsValIndex;
     bool isLatLon;
+    float latitude;
+    float longitude;
 };
 
 #endif
+
 
 

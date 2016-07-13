@@ -19,6 +19,11 @@ void setup() {
 }
 
 void loop() {
-  gp.update(true);
+  if (gp.update() == true) {
+    Serial.print("Latitude : ");
+    Serial.print(gp.getLatitude());
+    Serial.print("\tLongitude : ");
+    Serial.println(gp.getLongitude());
+  }
 }
 

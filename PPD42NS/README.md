@@ -1,12 +1,16 @@
 # PPD42NS
 
 Arduino Library for Dust Sensor(PPD42NS)
-https://www.sparkfun.com/products/13740
+https://www.seeedstudio.com/item_detail.html?p_id=1050
 
 ## Description
 
+ほこり検知センサのArduino用ライブラリ。
+(一部の通販サイトの型番では、SEN12291Pと表記されている。)
+
 公式のソースがpulseInを使用しており( http://www.seeedstudio.com/wiki/Grove_-_Dust_Sensor )、
 使い勝手が悪かったので書き直した。
+
 ちなみに、このセンサ実は出力ピンが2個あって二種類の粒度のホコリを取れるかもしれない(未着手)。
 
 ***DEMO:***

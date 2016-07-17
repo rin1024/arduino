@@ -17,6 +17,9 @@ PM2.5センサをそこはかとなく使えるようにした
 ***GP20U7:***
 GPSモジュールをSoftwareSerialで使えるようにした
 
+***S28BYJ48:***
+安いサーボモータとドライバを使えるように
+
 ## Requirement
 
 - Arduino IDE 1.6.5

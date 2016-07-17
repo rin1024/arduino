@@ -1,8 +1,10 @@
 # PPD42NS
 
 Arduino library for 28BYJ48 Stepper motor and ULN2003 driver
-28BYJ48 : http://robocraft.ru/files/datasheet/28BYJ-48.pdf
-ULN2003 : http://www.ti.com/lit/ds/symlink/uln2003a.pdf
+
+[28BYJ48](http://robocraft.ru/files/datasheet/28BYJ-48.pdf)
+
+[ULN2003](http://www.ti.com/lit/ds/symlink/uln2003a.pdf)
 
 ## Description
 
@@ -44,8 +46,7 @@ http://engyfun.blogspot.jp/2015/02/here-is-source-code-for-our-28byj48.html
 
 ***Pin Assign:***
 
-Reference:
-http://3.bp.blogspot.com/-yzEWT6VnYBI/VNboFHx0X2I/AAAAAAAAAAg/BpW3LvCVUR4/s1600/Wiring.png
+![PinAssign](https://github.com/rin1024/arduino/blob/master/S28BYJ48/Wiring.png)
 
 ## Requirement
 

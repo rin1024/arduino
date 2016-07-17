@@ -8,7 +8,7 @@ void setup(){
   Serial.begin(115200);
   Serial.println("start");
 
-  motor.setStepDuration(1);
+  motor.setStepDuration(800);
 
   pinMode(LED_PIN, OUTPUT);
 }

@@ -8,7 +8,7 @@ public:
     void step(int noOfSteps);    // Step a certain number of steps. + for one way and - for the other
     void stop();
 
-    int duration;    // Step duration in ms
+    int duration;    // Step duration in micros(minimum : 800)
     int inputPins[4];    // The input pin numbers
 };
 

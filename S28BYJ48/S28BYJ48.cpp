@@ -12,7 +12,7 @@ S28BYJ48::S28BYJ48(int In1, int In2, int In3, int In4) {
   for (int inputCount = 0; inputCount < 4; inputCount++) {
     pinMode(this->inputPins[inputCount], OUTPUT);
   }
-  duration = 50;
+  duration = 800;
 }
 
 void S28BYJ48::setStepDuration(int duration) {
@@ -45,7 +45,7 @@ void S28BYJ48::step(int noOfSteps) {
   */
   for (int sequenceNum = 0;  sequenceNum <= noOfSteps / 8; sequenceNum++) {
     for (int position = 0; ( position < 8 ) && ( position < ( noOfSteps - sequenceNum * 8 )); position++) {
-      delay(duration);
+      delayMicroseconds(duration);
       for (int inputCount = 0; inputCount < 4; inputCount++) {
         digitalWrite(this->inputPins[inputCount], sequence[(int)(3.5 - (3.5 * factor) + (factor * position))][inputCount]);
       }

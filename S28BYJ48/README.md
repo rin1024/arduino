@@ -1,4 +1,4 @@
-# PPD42NS
+# S28BYJ48
 
 Arduino library for 28BYJ48 Stepper motor and ULN2003 driver
 
@@ -25,7 +25,7 @@ http://engyfun.blogspot.jp/2015/02/here-is-source-code-for-our-28byj48.html
       Serial.begin(115200);
       Serial.println("start");
 
-      motor.setStepDuration(1);
+      motor.setStepDuration(800);
 
       pinMode(LED_PIN, OUTPUT);
     }

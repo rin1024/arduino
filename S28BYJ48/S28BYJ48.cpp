@@ -25,7 +25,8 @@ void S28BYJ48::step(int noOfSteps) {
       used to acheive rotation. The rows correspond to each step, and
       the columns correspond to each input. L
   */
-  bool sequence[][4] = {{LOW, LOW, LOW, HIGH },
+  bool sequence[][4] = {
+    {LOW, LOW, LOW, HIGH },
     {LOW, LOW, HIGH, HIGH},
     {LOW, LOW, HIGH, LOW },
     {LOW, HIGH, HIGH, LOW},
@@ -51,3 +52,10 @@ void S28BYJ48::step(int noOfSteps) {
     }
   }
 }
+
+void S28BYJ48::stop() {
+  for (int inputCount = 0; inputCount < 4; inputCount++) {
+    digitalWrite(this->inputPins[inputCount], LOW);
+  }
+}
+

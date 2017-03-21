@@ -8,7 +8,7 @@ void setup(){
   Serial.begin(115200);
   Serial.println("start");
 
-  motor.setStepDuration(800);
+  motor.setStepDuration(1200);
 
   pinMode(LED_PIN, OUTPUT);
 }
@@ -19,8 +19,12 @@ void loop(){
 
     digitalWrite(LED_PIN, HIGH);
     Serial.println("rotate");
-    motor.step(2352);
-//  motor.step(-4352);
+    // clockwise
+    // via https://arduino-info.wikispaces.com/SmallSteppers
+    // 64 * 64 = 4096[steps]
+    motor.step(4096);
+    // anti-clockwise
+    motor.step(-4096);
     digitalWrite(LED_PIN, LOW);
   }
 }

@@ -12,7 +12,7 @@ S28BYJ48::S28BYJ48(int In1, int In2, int In3, int In4) {
   for (int inputCount = 0; inputCount < 4; inputCount++) {
     pinMode(this->inputPins[inputCount], OUTPUT);
   }
-  duration = 800;
+  duration = 1200;
 }
 
 void S28BYJ48::setStepDuration(int duration) {

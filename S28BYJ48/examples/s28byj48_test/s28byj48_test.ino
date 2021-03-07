@@ -6,14 +6,15 @@ S28BYJ48 motor(8,9,10,11);
 
 void setup(){
   Serial.begin(115200);
-  Serial.println("start");
+  Serial.println("s28byj48_test start");
 
-  motor.setStepDuration(1200);
+  motor.setStepDuration(2400);//1200
 
   pinMode(LED_PIN, OUTPUT);
 }
 
 void loop(){
+/*
   while (Serial.available() > 0) {
     int serialData = Serial.read();
 
@@ -27,5 +28,6 @@ void loop(){
     motor.step(-4096);
     digitalWrite(LED_PIN, LOW);
   }
+*/
+    motor.step(4096);
 }
-
